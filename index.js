@@ -44,11 +44,11 @@ module.exports = {
    */
   create(options) {
     let moduleOptions = Object.assign({}, options || {});
-    moduleOptions = joi.attempt(
-      moduleOptions,
-      optionsSchema,
-      'Invalid options provided to simple-oauth2.'
-    );
+    // moduleOptions = joi.attempt(
+    //   moduleOptions,
+    //   optionsSchema,
+    //   'Invalid options provided to simple-oauth2.'
+    // );
 
     return {
       authorizationCode: authCodeModule(moduleOptions),
